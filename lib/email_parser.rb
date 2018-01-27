@@ -9,6 +9,6 @@ class EmailParser
   end
 
   def parse
-    @emails.split(" ").gsub(/,$/, "")
+    @emails.split(" ").map { |email| email.gsub(/,$/, "") }
   end
 end
