@@ -9,6 +9,6 @@ class EmailParser
   end
 
   def parse
-    @emails.split(" ").map { |email| email.gsub(/,$/, "") }
+    @emails.split(" ").map { |email| email.gsub(/,$/, "") }.uniq
   end
 end
